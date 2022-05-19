@@ -26,8 +26,10 @@ public class Main {
 //        Verification Tag
 //        0x79, 0x88, 0x29, 0x5e
         int verificate = 0;
-        verificate |= (bytes[2]& 0xff) << 8;
-        verificate|= (bytes[3] & 0xff);
+        verificate |= (bytes[4]& 0xff) << 32;
+        verificate |= (bytes[5]& 0xff) << 16;
+        verificate |= (bytes[6]& 0xff) << 8;
+        verificate|= (bytes[7] & 0xff);
         System.out.println("verificate  "+ verificate);
 
 
