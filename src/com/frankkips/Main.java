@@ -37,6 +37,16 @@ public class Main {
         int type = bytes[12];
         System.out.println("type: " + type);
 
+//        B flag
+
+
+//        length
+//        0x00, 0x34
+        int length = 0;
+        length |= (bytes[14]& 0xff) << 8;
+        length|= (bytes[15] & 0xff);
+        System.out.println("length "+ length);
+        
 
 
 
