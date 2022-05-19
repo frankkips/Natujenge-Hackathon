@@ -38,6 +38,12 @@ public class Main {
         System.out.println("type: " + type);
 
 //        B flag
+//        0x03 0000 0011 0000 0010
+        boolean flag = (bytes[14] & 0b000000010) > 0;
+        System.out.println("B flag " + flag);
+
+
+
 
 
 //        length
@@ -46,7 +52,7 @@ public class Main {
         length |= (bytes[14]& 0xff) << 8;
         length|= (bytes[15] & 0xff);
         System.out.println("length "+ length);
-        
+
 
 
 
